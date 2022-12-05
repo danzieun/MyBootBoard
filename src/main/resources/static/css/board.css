@@ -1,0 +1,60 @@
+.content .listBoard {
+	align: center;
+	border: 1px solid #000;
+	cellpadding: 0;
+	cellspacing: 0;
+	width: 700px;
+}
+
+.content .insertBoard {
+	border: 1px solid #000;
+	cellpadding: 0;
+	cellspacing: 0;
+	width: 700px;
+}
+
+.content .getBoard {
+	border: 1px solid #000;
+	cellpadding: 0;
+	cellspacing: 0;
+	width: 700px;
+}
+
+.content .updateReply {
+	border: 1px solid #000;
+	cellpadding: 0;
+	cellspacing: 0;
+	width: 700px;
+}
+
+.paging {
+	cellpadding: 0;
+	cellspacing: 0;
+	width: 700px;
+}
+
+.reply .listReply {
+	border: 1px solid #000;
+	cellpadding: 0;
+	cellspacing: 0;
+	width: 700px;
+}
+
+.reply .insertReply {
+	border: 1px solid #000;
+	cellpadding: 0;
+	cellspacing: 0;
+	width: 700px;
+}
+
+.alignLeft {
+	text-align: left;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.alignRight {
+	text-align: right;
+}

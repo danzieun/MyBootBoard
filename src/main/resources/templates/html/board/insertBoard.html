@@ -1,0 +1,72 @@
+<html xmlns:th="http://www.thymeleaf.org" 
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>새 글 등록</title>
+	<link rel="stylesheet" th:href="@{/css/board.css}" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="title">
+		<h3>게시글 등록</h3>
+		</div>
+		
+		<div class="content">
+			<form th:action="@{/board/insertBoardProc}" method="post" enctype="multipart/form-data">
+				<table class="insertBoard">
+					<colgroup>
+						<col width="30%">
+						<col width="70%">
+					</colgroup>
+					
+					<tr>
+						<td>제목</td>
+						<td class="alignLeft">
+							<input type="text" name="title"/>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>분류</td>
+						<td>
+							<select name="category">
+								<option sec:authorize="hasRole('ROLE_ADMIN')" value="공지">공지</option>
+								<option value="자유">자유</option>
+								<option value="기타">기타</option>
+							</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>작성자</td>
+						<td class="alignLeft">
+							<span sec:authentication="principal.member.name"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>내용</td>
+						<td class="alignLeft">
+							<textarea name="content" cols="40" rows="10"></textarea>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="alignCenter">
+							<input type="file" multiple="multiple" name="files">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="alignCenter">
+							<input type="button" value="목록" onclick="event.preventDefault(); location.href='/board/listBoard';" />
+							<input type="submit" value=" 새글 등록 "/>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

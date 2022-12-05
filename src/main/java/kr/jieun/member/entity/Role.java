@@ -1,0 +1,5 @@
+package kr.jieun.member.entity;
+
+public enum Role {
+	ROLE_MEMBER, ROLE_ADMIN
+}
